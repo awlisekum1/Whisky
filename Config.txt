@@ -1,0 +1,71 @@
+{
+    "Backtester": {
+        "backtesterName": "simpleBacktester",
+        "cost": 2.5e-05,
+        "fitDayorSession": "day",
+        "sample": "all",
+        "threshold": 0.61,
+        "weight": [
+            0.01,
+            0.99
+        ]
+    },
+    "Data": {
+        "DataFilePath": "/Users/TaoLuo/Desktop/backtest/Python/HFT Framework",
+        "dt": 600,
+        "leadLagFiles": {
+            "rb": "/Users/TaoLuo/Desktop/backtest/High Frequency Data/temp/SHFE/rb/day/2016/08/"
+        },
+        "loadMethod": "pickle",
+        "pricepertick": 10.0,
+        "shuffle": false,
+        "trainRatio": 0.7
+    },
+    "Driver": {
+        "crossoverRate": 0.99,
+        "cutRatio": 0.5,
+        "evolveTime": 2,
+        "lhsParamRange": [
+            4,
+            15
+        ],
+        "mutationRate": 0.99,
+        "populationSize": 2,
+        "thresholdRange": [
+            0.4,
+            0.4
+        ]
+    },
+    "Fitter": {
+        "fitterName": "OLS",
+        "fitterParams": null
+    },
+    "Lhs": {
+        "lhsName": "avgTickChange",
+        "lhsParams": 6,
+        "lhsPrice": "MidPrice"
+    },
+    "Signal": {
+        "adjSpread": true,
+        "lags": 10,
+        "leadLag": [
+            "rb"
+        ],
+        "signalNameList": [
+            "OIR",
+            "MPB",
+            "VOI",
+            "TALibSignals",
+            "Lag",
+            "macdsignal"
+        ],
+        "signalParams": null,
+        "talibSignalList": [
+            "macd",
+            "WILLR",
+            "RSI",
+            "EMA",
+            "STOCH"
+        ]
+    }
+}
